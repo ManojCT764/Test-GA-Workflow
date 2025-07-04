@@ -8,6 +8,7 @@ on:
     pull_request:
         branches:
             - master
+    # This allows manual triggering of the workflow
 jobs:
     on-push: #job 1
         if: github.event_name == 'push'
