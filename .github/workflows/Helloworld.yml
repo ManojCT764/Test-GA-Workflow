@@ -1,0 +1,22 @@
+# This is a GitHub Actions workflow file that runs a simple "Hello World" job.
+# on: [push]
+
+name: "Hello World Workflow"
+
+
+# This will trigger the workflow on pushes to the master and production branches.
+
+on:
+  push:
+    branches:
+      - master
+      - production
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest    #This is a predefined key, this key specifies the type of environment were the job will run.
+    steps:
+      - name: "Hello World Step" #this is just a name for the step.
+        run: echo "Hello, World!" #this is the command that will be executed in the step
+      - name: "Print Manoj"
+        run: echo "Manoj"
