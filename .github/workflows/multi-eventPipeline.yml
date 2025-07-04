@@ -8,15 +8,20 @@ on:
     pull_request:
         branches:
             - master
+
     workflow_dispatch: # This allows manual triggering of the workflow
+
 jobs:
-    on-push:
+    on-push: #job 1
+        if: github.event_name == 'push'
+
         runs-on: ubuntu-latest
         steps:
             - name: "Running on master/test branch push"
               run: echo "This job runs on push to master/test branch"
 
-    on-pull-request:
+    on-pull-request: #job 2
+        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
             - name: "Running on pull request"
