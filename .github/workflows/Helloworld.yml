@@ -20,3 +20,5 @@ jobs:
         run: echo "Hello, World!" #this is the command that will be executed in the step
       - name: "Print Manoj"
         run: echo "Manoj"
+      - name: "Print current date"
+        run: date
