@@ -10,6 +10,8 @@ on:
             - master
         types:
             - closed
+            - opened #we can exicute jobs in multiple types of pull request events
+            
     # You can add more events here if needed
 
     workflow_dispatch: # This allows manual triggering of the workflow
