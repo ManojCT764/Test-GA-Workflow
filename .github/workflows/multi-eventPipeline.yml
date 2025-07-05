@@ -15,7 +15,7 @@ on:
     # You can add more events here if needed
 
     workflow_dispatch: # This allows manual triggering of the workflow
-    
+
 jobs:
     on-push: #job 1
         if: github.event_name == 'push'
