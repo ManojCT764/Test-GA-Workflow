@@ -5,13 +5,18 @@ on:
         branches:
             - master
             - test
+
+    schedule: # we can take help of cron creater--> https://crontab-generator.org/
+        - cron: '0 6 3 * *' # At 06:00 on day-of-month 3
+        - cron: '0 10 5 * *' # At 10:00 on day-of-month 5 testing if it runs today or not
+        
     pull_request:
         branches:
             - master
         types:
             - closed
             - opened #we can exicute jobs in multiple types of pull request events
-            
+
     # You can add more events here if needed
 
     workflow_dispatch: # This allows manual triggering of the workflow
